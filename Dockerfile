@@ -1,5 +1,5 @@
 FROM python:3.6.3-alpine3.7
-MAINTAINER researchranks.com | @climateamante
+MAINTAINER @climateamante
 
 # create app directories
 RUN mkdir -p /var/www/app
@@ -13,5 +13,7 @@ RUN apk --update --no-cache add \
 		openssh \
 		openssl
 
-RUN pip install --upgrade pip
-RUN pip install --upgrade storyscript
+RUN pip install --upgrade \
+	pip \
+	story \
+	storyscript
