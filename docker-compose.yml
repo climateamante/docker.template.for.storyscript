@@ -1,0 +1,27 @@
+# docker-enginge: 18.09.2+
+# docker-compose.yml preferes spaces over tabs
+
+version: '3.3'
+
+services:
+
+  storyscript.app:
+    container_name: storyscript.container.app
+    volumes:
+        - ./app:/var/www/app/
+    build:
+        labels:
+            alpine.python.storyscript.app.description: "template boilerplate for compiling storyscript"
+        
+        context: ./
+        dockerfile: ./dockerfiles/docker.alpine.python.storyscript.sh
+        
+    command: "/bin/ash"
+    
+    image: climateamante/storyscript:latest
+
+    expose:
+        - 8080
+
+    ports:
+        - 80:8080
