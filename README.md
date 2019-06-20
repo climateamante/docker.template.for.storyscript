@@ -13,7 +13,7 @@
     docker run \
     -v $PWD/app:/var/www/app \
     -p 80:8080 \
-    --name storscript.dev \
+    --name storyscript.dev \
     -it --rm climateamante/storyscript:latest /bin/ash
     ```
     
