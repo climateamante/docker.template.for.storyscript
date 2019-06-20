@@ -4,7 +4,6 @@
 
 ### I've pulled the Docker image, now what?
 
-
 1. create an `app` folder for your local working directory
     > helpful for saving files locally once the container is stoped
     
